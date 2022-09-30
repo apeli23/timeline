@@ -51,6 +51,7 @@ export default function Home() {
     console.log(section);
 
     html2canvas(section).then(function (canvas) {
+      console.log(canvas.toDataURL())
       try {
         fetch('/api/upload', {
           method: 'POST',

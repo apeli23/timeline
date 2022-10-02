@@ -6,6 +6,7 @@ import html2canvas from "html2canvas";
 export default function Home() {
   const captionRef = useRef();
   const [link, setLink] = useState('');
+  const [url, setUrl] = useState('');
 
   useEffect(() => {
     var animation = anime.timeline({
@@ -72,7 +73,7 @@ export default function Home() {
     <>
       <nav>
         <h2>Timeline Animations using Javascript</h2>
-        {link && <a href={link}><h3>Caption</h3></a>}
+        {url && <a href={link}><h3>Caption</h3></a>}
         <button onClick={captionHandler}>Caption</button>
       </nav>
       <section id="section" ref={captionRef}>
